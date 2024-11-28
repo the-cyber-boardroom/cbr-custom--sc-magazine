@@ -11,6 +11,7 @@ repository  = "https://github.com/the-cyber-boardroom/cbr-custom--sc-magazine"
 [tool.poetry.dependencies]
 python          = "^3.7"
 osbot-utils     = "*"
+osbot-aws       = "*"
 
 
 [build-system]
