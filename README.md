@@ -1,12 +1,9 @@
 ---
-title: CBR XYZ
+title: CBR Custom SC Magazine
 ---
 
-# cbr-xyz
-Repo for XYZ (replace with name of project). 
-
-This is the template for the other projects and builds up the main CI/CD pipeline
-
+# cbr-custom__sc_magazine
+Repo for Custom SC Magazine 
 
 ## Repo details
 

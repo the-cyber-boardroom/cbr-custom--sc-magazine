@@ -1,12 +1,12 @@
 [tool.poetry]
-name        = "cbr_xyz"
+name        = "cbr_custom__sc_magazine"
 version     = "v0.8.1"
-description = "CBR - XYZ"
+description = "CBR Custom - SC Magazine"
 authors     = ["Dinis Cruz <dinis.cruz@owasp.org>"]
-license     = "MIT"
+license     = "Apache 2.0"
 readme      = "README.md"
-homepage    = "https://github.com/the-cyber-boardroom/cbr-xyz"
-repository  = "https://github.com/the-cyber-boardroom/cbr-xyz"
+homepage    = "https://github.com/the-cyber-boardroom/cbr-custom--sc-magazine"
+repository  = "https://github.com/the-cyber-boardroom/cbr-custom--sc-magazine"
 
 [tool.poetry.dependencies]
 python          = "^3.7"

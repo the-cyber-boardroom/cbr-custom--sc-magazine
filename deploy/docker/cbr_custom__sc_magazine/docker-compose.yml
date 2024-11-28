@@ -1,0 +1,8 @@
+services:
+  cbr_custom__sc_magazine:
+    build:
+      context: ../../..
+      dockerfile: ./deploy/docker/cbr_custom__sc_magazine/Dockerfile
+    platform: linux/amd64
+    container_name: cbr_custom__sc_magazine
+    tty: true
