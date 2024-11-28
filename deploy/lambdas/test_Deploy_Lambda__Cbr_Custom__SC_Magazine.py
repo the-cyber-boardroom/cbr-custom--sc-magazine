@@ -1,6 +1,6 @@
 from unittest                               import TestCase
 
-from cbr_custom__sc_magazine.utils.Version import version__cbr_custom__sc_magazine
+from cbr_custom_sc_magazine.utils.Version import version__cbr_custom_sc_magazine
 from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine import Deploy_Lambda__Cbr_Custom_Sc_Magazine
 
 
@@ -18,4 +18,4 @@ class test_Deploy_Lambda__OSBot_LLMs(TestCase):
     def test_ecr_image_uri(self):
         with self.deploy_lambda as _:
             ecr_image_uri = _.ecr_image_uri()       # todo: change values below to aws_config.account_id() and aws_config.region_name()
-            assert ecr_image_uri == f'654654216424.dkr.ecr.eu-west-1.amazonaws.com/osbot_flows:{version__cbr_custom__sc_magazine}'
+            assert ecr_image_uri == f'654654216424.dkr.ecr.eu-west-1.amazonaws.com/osbot_flows:{version__cbr_custom_sc_magazine}'

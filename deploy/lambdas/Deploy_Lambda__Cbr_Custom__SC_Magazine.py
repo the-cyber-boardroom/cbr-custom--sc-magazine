@@ -2,12 +2,11 @@ from osbot_utils.utils.Env                  import get_env, load_dotenv
 from osbot_aws.AWS_Config                   import aws_config
 from osbot_utils.base_classes.Type_Safe     import Type_Safe
 from osbot_aws.deploy.Deploy_Lambda         import Deploy_Lambda
-
-from cbr_custom__sc_magazine.utils.Version import version__cbr_custom__sc_magazine
+from cbr_custom_sc_magazine.utils.Version   import version__cbr_custom_sc_magazine
 
 
 class Deploy_Lambda__Cbr_Custom_Sc_Magazine(Type_Safe):
-    lambda_name : str = 'cbr_custom__sc_magazine'
+    lambda_name : str = 'cbr_custom_sc_magazine'
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -41,7 +40,7 @@ class Deploy_Lambda__Cbr_Custom_Sc_Magazine(Type_Safe):
         account_id  = aws_config.account_id()
         region_name = aws_config.region_name()
         image_name  = self.lambda_name
-        image_tag   = version__cbr_custom__sc_magazine
+        image_tag   = version__cbr_custom_sc_magazine
         return f'{account_id}.dkr.ecr.{region_name}.amazonaws.com/{image_name}:{image_tag}'
 
     def setup_aws_credentials(self):
