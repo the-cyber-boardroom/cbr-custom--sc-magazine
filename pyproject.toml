@@ -1,5 +1,5 @@
 [tool.poetry]
-name        = "cbr_custom__sc_magazine"
+name        = "cbr_custom_sc_magazine"
 version     = "v0.1.2"
 description = "CBR Custom - SC Magazine"
 authors     = ["Dinis Cruz <dinis.cruz@owasp.org>"]
