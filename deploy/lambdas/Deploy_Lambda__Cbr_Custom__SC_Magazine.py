@@ -45,10 +45,10 @@ class Deploy_Lambda__Cbr_Custom_Sc_Magazine(Type_Safe):
 
     def setup_aws_credentials(self):
         load_dotenv()
-        aws_config.set_aws_session_account_id (get_env('AWS_ACCOUNT_ID__654654216424'       ))
-        aws_config.set_region                 (get_env('AWS_DEFAULT_REGION__654654216424'   ))
-        aws_config.set_aws_access_key_id      (get_env('AWS_ACCESS_KEY_ID__654654216424'    ))
-        aws_config.set_aws_secret_access_key  (get_env('AWS_SECRET_ACCESS_KEY__654654216424'))
+        aws_config.set_aws_session_account_id (get_env('AWS_ACCOUNT_ID'       ))
+        aws_config.set_region                 (get_env('AWS_DEFAULT_REGION'   ))
+        aws_config.set_aws_access_key_id      (get_env('AWS_ACCESS_KEY_ID'    ))
+        aws_config.set_aws_secret_access_key  (get_env('AWS_SECRET_ACCESS_KEY'))
 
 
 if __name__ == '__main__':
