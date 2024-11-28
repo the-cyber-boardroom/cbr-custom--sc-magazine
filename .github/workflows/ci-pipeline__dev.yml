@@ -8,9 +8,7 @@ on:
 env:
   GIT__BRANCH      : 'dev'
   RELEASE_TYPE     : 'minor'
-  PACKAGE_NAME     : 'cbr_xyz'
-  DOCKER__CONTEXT  : "."
-  DOCKER__FILE     : './deploy/docker/osbot-llms/Dockerfile'
+  PACKAGE_NAME     : 'cbr_custom_sc_magazine'
 
 jobs:
 
