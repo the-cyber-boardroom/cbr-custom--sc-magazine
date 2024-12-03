@@ -19,7 +19,7 @@ class test__qa__Routes__Info(TestCase):
         response.raise_for_status()
         return response
 
-    # def test_raw_html_live(self):
-    #     response = self.requests_get('info/version')
-    #     assert response.status_code == 200
+    def test_raw_html_live(self):
+        response = self.requests_get('info/version')
+        assert response.status_code == 200
     #     print(response.json())
