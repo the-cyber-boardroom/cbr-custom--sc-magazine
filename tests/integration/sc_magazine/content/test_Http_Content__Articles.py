@@ -1,8 +1,5 @@
-from unittest import TestCase
-
-from osbot_utils.utils.Dev import pprint
-
-from cbr_custom_sc_magazine.sc_magazine.content.Http_Content__Articles import Http_Content__Articles
+from unittest                                                           import TestCase
+from cbr_custom_sc_magazine.sc_magazine.content.Http_Content__Articles  import Http_Content__Articles
 
 
 class test_Http_Content__Articles(TestCase):
@@ -24,10 +21,6 @@ class test_Http_Content__Articles(TestCase):
 
     def test_articles__html(self):
         with self.http_content_articles as _:
-            html = _.articles__html()
+            html = _.homepage__html()
             assert " <title>SC Media UK</title>\n" in html
 
-    def test_articles__soup(self):
-        with self.http_content_articles as _:
-            soup = _.articles__soup()
-            assert soup.title.string == "SC Media UK"

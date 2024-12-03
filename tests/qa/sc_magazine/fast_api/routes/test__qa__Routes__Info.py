@@ -1,7 +1,9 @@
+import pytest
 import requests
-from unittest                                              import TestCase
-from cbr_custom_sc_magazine.utils.Version                  import version__cbr_custom_sc_magazine
-from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine import Deploy_Lambda__Cbr_Custom_SC_Magazine
+from unittest                                               import TestCase
+from osbot_utils.utils.Env                                  import not_in_github_action
+from cbr_custom_sc_magazine.utils.Version                   import version__cbr_custom_sc_magazine
+from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine  import Deploy_Lambda__Cbr_Custom_SC_Magazine
 
 
 class test__qa__Routes__Info(TestCase):
@@ -20,6 +22,8 @@ class test__qa__Routes__Info(TestCase):
         return response
 
     def test_raw_html_live(self):
+        if not_in_github_action():
+            pytest.skip("This test can only be executed in GH Actions after the deployment of the latest lambda")
         response = self.requests_get('info/version')
         assert response.status_code == 200
         assert response.json() == {'version': version__cbr_custom_sc_magazine}
