@@ -1,5 +1,6 @@
 from unittest                                                      import TestCase
 from cbr_custom_sc_magazine.sc_magazine.fast_api.routes.Routes__UK import Routes__UK
+from tests.integration.sc_magazine__objs_for_tests import HTML_TITLE
 
 
 class test__int__Routes__UK(TestCase):
@@ -15,8 +16,4 @@ class test__int__Routes__UK(TestCase):
 
     def test__raw_html(self):
         with self.routes_sc_magazine_uk as _:
-            response = _.raw_html()
-            assert response == 'will be here'
-
-            response_custom = _.raw_html(path='/custom')
-            assert response_custom == 'will be here'
+            assert HTML_TITLE in _.articles_html()
