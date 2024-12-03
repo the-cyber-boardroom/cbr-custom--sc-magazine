@@ -1,7 +1,7 @@
-from unittest                  import TestCase
-from osbot_utils.utils.Objects import dict_to_obj
-
-from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine import Deploy_Lambda__Cbr_Custom_SC_Magazine
+from unittest                                               import TestCase
+from osbot_utils.utils.Dev                                  import pprint
+from osbot_utils.utils.Objects                              import dict_to_obj
+from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine  import Deploy_Lambda__Cbr_Custom_SC_Magazine
 
 
 class test__live_lambda_function(TestCase):
@@ -22,6 +22,11 @@ class test__live_lambda_function(TestCase):
             result = obj(_.invoke())
             assert result.errorType == 'Runtime.ExitError'                                  # BUG
             assert 'Runtime exited without providing a reason' in result.errorMessage       # BUG
+
+    # def test_invoke_with_logs(self):
+    #     with self.lambda_function as _:
+    #         result = obj(_.invoke_return_logs())
+    #         pprint(result)
 
 
 obj = dict_to_obj
