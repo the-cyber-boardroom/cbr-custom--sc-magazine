@@ -1,6 +1,6 @@
 [tool.poetry]
 name        = "cbr_custom_sc_magazine"
-version     = "v1.1.0"
+version     = "v1.2.0"
 description = "CBR Custom - SC Magazine"
 authors     = ["Dinis Cruz <dinis.cruz@owasp.org>"]
 license     = "Apache 2.0"
