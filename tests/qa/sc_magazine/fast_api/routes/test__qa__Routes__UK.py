@@ -4,7 +4,7 @@ from osbot_aws.AWS_Config                                  import aws_config
 from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine import Deploy_Lambda__Cbr_Custom_SC_Magazine
 
 
-class test__qa__Routes__SC_Magazine__UK(TestCase):
+class test__qa__Routes__UK(TestCase):
 
     @classmethod
     def setUpClass(cls):
