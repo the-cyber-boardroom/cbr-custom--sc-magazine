@@ -1,5 +1,6 @@
 from osbot_fast_api.api.Fast_API_Routes import Fast_API_Routes
 
+ROUTES_PATHS__SC_MAGAZINE__UK = ['/raw-html']
 
 class Routes__SC_Magazine__UK(Fast_API_Routes):
     tag : str = 'uk'

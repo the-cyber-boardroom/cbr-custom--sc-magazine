@@ -3,7 +3,6 @@ from osbot_utils.utils.Files            import file_contents, path_combine
 
 import cbr_custom_sc_magazine
 
-
 class Version(Type_Safe):
 
     FILE_NAME_VERSION = 'version'
