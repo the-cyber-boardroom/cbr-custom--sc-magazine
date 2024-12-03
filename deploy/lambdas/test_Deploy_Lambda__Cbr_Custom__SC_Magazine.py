@@ -1,14 +1,14 @@
 from unittest                               import TestCase
 
 from cbr_custom_sc_magazine.utils.Version import version__cbr_custom_sc_magazine
-from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine import Deploy_Lambda__Cbr_Custom_Sc_Magazine
+from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine import Deploy_Lambda__Cbr_Custom_SC_Magazine
 
 
 class test_Deploy_Lambda__OSBot_LLMs(TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.deploy_lambda = Deploy_Lambda__Cbr_Custom_Sc_Magazine()
+        cls.deploy_lambda = Deploy_Lambda__Cbr_Custom_SC_Magazine()
 
     def test_deploy_lambda(self):
         with self.deploy_lambda as _:

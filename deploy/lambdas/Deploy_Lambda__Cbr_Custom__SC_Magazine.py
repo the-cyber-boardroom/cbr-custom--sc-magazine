@@ -5,7 +5,7 @@ from osbot_aws.deploy.Deploy_Lambda         import Deploy_Lambda
 from cbr_custom_sc_magazine.utils.Version   import version__cbr_custom_sc_magazine
 
 
-class Deploy_Lambda__Cbr_Custom_Sc_Magazine(Type_Safe):
+class Deploy_Lambda__Cbr_Custom_SC_Magazine(Type_Safe):
     lambda_name : str = 'cbr_custom_sc_magazine'
 
     def __init__(self, **kwargs):
@@ -53,10 +53,10 @@ class Deploy_Lambda__Cbr_Custom_Sc_Magazine(Type_Safe):
 
 if __name__ == '__main__':
     print("****************************************************")
-    print("****   Deploy_Lambda__Cbr_Custom_Sc_Magazine    ****")
+    print("****   Deploy_Lambda__Cbr_Custom_SC_Magazine    ****")
     print("****************************************************")
     print()
-    with Deploy_Lambda__Cbr_Custom_Sc_Magazine() as _:
+    with Deploy_Lambda__Cbr_Custom_SC_Magazine() as _:
         print(f"... deploying lambda function: {_.lambda_name}")
         _.deploy()
         response = _.invoke()
