@@ -1,6 +1,8 @@
 from unittest                                                           import TestCase
 from osbot_fast_api.utils.Fast_API_Server                               import Fast_API_Server
 from cbr_custom_sc_magazine.sc_magazine.fast_api.SC_Magazine__Fast_API  import SC_Magazine__Fast_API
+from tests.integration.sc_magazine__objs_for_tests                      import HTML_TITLE__ARTICLES_PAGE
+
 
 class test__http__Routes__UK(TestCase):
 
@@ -16,12 +18,7 @@ class test__http__Routes__UK(TestCase):
         cls.fast_api_server.stop()
         assert cls.fast_api_server.is_port_open() is False
 
-    def test_raw_html_endpoint(self):
-        response = self.fast_api_server.requests_get('/uk/raw-html')
+    def test_http__uk__articles_html(self):
+        response = self.fast_api_server.requests_get('/uk/articles-html')
         assert response.status_code == 200
-        assert response.json()      == 'will be here'
-
-    def test_raw_html_with_custom_path(self):
-        response = self.fast_api_server.requests_get('/uk/raw-html', params={'path': '/custom'})
-        assert response.status_code == 200
-        assert response.json()      == 'will be here'
+        assert HTML_TITLE__ARTICLES_PAGE in response.text
