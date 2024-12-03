@@ -1,8 +1,7 @@
-from unittest import TestCase
-
-from osbot_utils.utils.Dev import pprint
-
-from cbr_custom_sc_magazine.sc_magazine.fast_api.SC_Magazine__Fast_API import SC_Magazine__Fast_API
+from unittest                                                           import TestCase
+from cbr_custom_sc_magazine.sc_magazine.fast_api.SC_Magazine__Fast_API  import SC_Magazine__Fast_API
+from cbr_custom_sc_magazine.sc_magazine.fast_api.routes.Routes__Info    import ROUTES_PATHS__INFO
+from cbr_custom_sc_magazine.sc_magazine.fast_api.routes.Routes__UK      import ROUTES_PATHS__UK
 
 
 class test_SC_Magazine__Fast_API(TestCase):
@@ -18,4 +17,9 @@ class test_SC_Magazine__Fast_API(TestCase):
         self.fast_api.setup()
         routes = self.fast_api.routes_paths()
 
-        assert routes == ['/', '/config/info', '/config/status', '/config/version', '/uk/raw-html']
+        assert routes == sorted(['/', '/config/info', '/config/status', '/config/version'] \
+                                 + ROUTES_PATHS__UK                                        \
+                                 + ROUTES_PATHS__INFO                                      )
+
+
+

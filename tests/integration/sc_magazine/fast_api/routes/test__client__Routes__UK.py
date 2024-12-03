@@ -1,7 +1,7 @@
 from unittest                                      import TestCase
 from tests.integration.sc_magazine__objs_for_tests import sc_magazine__fast_api__client
 
-class test__client__Routes__SC_Magazine__UK(TestCase):
+class test__client__Routes__UK(TestCase):
 
     @classmethod
     def setUpClass(cls):

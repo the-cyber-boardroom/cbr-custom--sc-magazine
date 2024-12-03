@@ -2,7 +2,7 @@ from unittest                                                           import T
 from osbot_fast_api.utils.Fast_API_Server                               import Fast_API_Server
 from cbr_custom_sc_magazine.sc_magazine.fast_api.SC_Magazine__Fast_API  import SC_Magazine__Fast_API
 
-class test__http__Routes__SC_Magazine__UK(TestCase):
+class test__http__Routes__UK(TestCase):
 
     @classmethod
     def setUpClass(cls):
