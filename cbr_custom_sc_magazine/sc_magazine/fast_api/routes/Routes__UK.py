@@ -10,11 +10,11 @@ class Routes__UK(Fast_API_Routes):
     tag                  : str = 'uk'
     http_content_articles: Http_Content__Articles
 
-    def articles_data(self):
-        return self.http_content_articles.articles__data()
+    def articles_data(self, page=1):
+        return self.http_content_articles.articles__data(page=page)
 
-    def articles_html(self):
-        return self.http_content_articles.articles__html()
+    def articles_html(self, page=1):
+        return self.http_content_articles.articles__html(page=page)
 
     def homepage_data(self):
         return self.http_content_articles.homepage__data()

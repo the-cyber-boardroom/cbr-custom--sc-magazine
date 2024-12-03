@@ -8,8 +8,9 @@ from cbr_custom_sc_magazine.sc_magazine.content.SC_Magazine_Parser  import SC_Ma
 class Http_Content__Articles(Type_Safe):
     server: str = 'https://insight.scmagazineuk.com/'
 
-    @cache_on_self                                  # todo: add a better caching architecture (for example onne based on S3_DB__Cache)
+    #@cache_on_self                                  # todo: add a better caching architecture (for example onne based on S3_DB__Cache)
     def requests_get(self, path='', params=None):
+        print(path, params)
         url = url_join_safe(self.server, path)
         return requests.get(url, params=params)
 

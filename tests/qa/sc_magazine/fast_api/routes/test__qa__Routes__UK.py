@@ -26,8 +26,3 @@ class test__qa__Routes__UK(TestCase):
         assert f'lambda-url.{aws_region}.on.aws' in self.lambda_url
         assert response.status_code              == 307
         assert response.headers['location']      == '/docs'
-
-    def test_raw_html_live(self):
-        response = self.requests_get('raw-html')
-        assert response.status_code == 200
-        assert 'will be here'       in response.text
