@@ -1,6 +1,6 @@
 import requests
 from unittest                                              import TestCase
-from osbot_aws.AWS_Config                                  import aws_config
+from cbr_custom_sc_magazine.utils.Version                  import version__cbr_custom_sc_magazine
 from deploy.lambdas.Deploy_Lambda__Cbr_Custom__SC_Magazine import Deploy_Lambda__Cbr_Custom_SC_Magazine
 
 
@@ -22,4 +22,4 @@ class test__qa__Routes__Info(TestCase):
     def test_raw_html_live(self):
         response = self.requests_get('info/version')
         assert response.status_code == 200
-    #     print(response.json())
+        assert response.json() == {'version': version__cbr_custom_sc_magazine}
