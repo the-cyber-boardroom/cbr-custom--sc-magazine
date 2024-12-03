@@ -16,6 +16,7 @@ osbot-fast-api  = "*"
 mangum          = "*"
 httpx           = "*"
 uvicorn         = "*"
+bs4             = "*"
 
 
 [build-system]
