@@ -10,7 +10,6 @@ class Http_Content__Articles(Type_Safe):
 
     #@cache_on_self                                  # todo: add a better caching architecture (for example onne based on S3_DB__Cache)
     def requests_get(self, path='', params=None):
-        print(path, params)
         url = url_join_safe(self.server, path)
         return requests.get(url, params=params)
 
