@@ -7,5 +7,5 @@ Repo for Custom SC Magazine
 
 ## Repo details
 
-![Current Release](https://img.shields.io/badge/release-v1.2.0-blue)
+![Current Release](https://img.shields.io/badge/release-v1.3.0-blue)
 
